@@ -27,8 +27,7 @@ const NavApp = () => {
             <Nav className="me-auto">
               
                 <Nav.Link as={NavLink} to='/'> <HiHome /> Home  </Nav.Link>
-              
-              
+
                 <Nav.Link as={NavLink} to='cart'> <FaShoppingCart /> Cart - <span className="cart-num"> {cart.length} </span> </Nav.Link>
               
             </Nav>

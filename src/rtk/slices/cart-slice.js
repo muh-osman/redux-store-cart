@@ -6,12 +6,20 @@ export const cartSlice = createSlice({
     name: "cartSlice",
     reducers: {
         addToCart: (state, action)=> {
-            state.push(action.payload)
+            const findProduct =  state.find((product)=> product.id === action.payload.id)
+            if (findProduct) {
+                findProduct.quantity += 1
+            } else {
+                const productClone = {...action.payload, quantity: 1}
+                state.push(productClone)
+            }
         },
         deleteFromCart: (state, action)=> {
             return state.filter((product)=> product.id !== action.payload.id)
         },
-        clear: (state, action)=> {},
+        clear: (state, action)=> {
+            return []
+        },
     }
 })
 
