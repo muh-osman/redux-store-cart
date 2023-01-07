@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import { Provider } from "react-redux";
-import { store } from "./rtk/srore";
+import { store } from "./rtk/store";
 
 
 
